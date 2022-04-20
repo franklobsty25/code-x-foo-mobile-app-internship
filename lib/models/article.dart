@@ -3,6 +3,7 @@ class Article {
   final List? imageUrl;
   final String? headline;
   final String? description;
+  final String? publishDate;
   final List? authorName;
   final List? authorImageUrl;
 
@@ -13,6 +14,7 @@ class Article {
     this.description,
     this.authorName,
     this.authorImageUrl,
+    this.publishDate,
   });
 
   static Article fromJson(Map<String, dynamic> json) {
@@ -21,6 +23,7 @@ class Article {
       imageUrl: json["thumbnails"],
       headline: json["metadata"]["headline"],
       description: json["metadata"]["description"],
+      publishDate: json["metadata"]["publishDate"],
       authorName: json["authors"],
       authorImageUrl: json["authors"],
     );

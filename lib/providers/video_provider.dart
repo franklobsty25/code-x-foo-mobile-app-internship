@@ -12,8 +12,8 @@ class VideoProvider extends ChangeNotifier {
 
   Future getVideosFromUrl() async {
     try {
-      final response =
-          await http.get(Uri.parse('https://ign-apis.herokuapp.com/videos'));
+      final response = await http.get(Uri.parse(
+          'https://ign-apis.herokuapp.com/videos?startIndex=30&count=30'));
 
       if (response.statusCode == 200) {
         final videoData = jsonDecode(response.body);

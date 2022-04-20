@@ -24,9 +24,13 @@ class _CommentState extends State<Comment> {
 
         _content = countData['content'];
 
-        setState(() {
-          this._count = _content[0]['count'];
-        });
+        if (_content.isNotEmpty) {
+          setState(() {
+            final count = _content
+                .reduce((value, element) => value['count'] + element['count']);
+            this._count = count['count'];
+          });
+        }
       }
     } catch (e) {
       debugPrint(e.toString());

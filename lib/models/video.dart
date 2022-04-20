@@ -3,6 +3,7 @@ class Video {
   final List? videoUrl;
   final String? title;
   final String? description;
+  final String? publishDate;
   final List? assets;
 
   Video({
@@ -10,6 +11,7 @@ class Video {
     this.videoUrl,
     this.title,
     this.description,
+    this.publishDate,
     this.assets,
   });
 
@@ -19,6 +21,7 @@ class Video {
       videoUrl: json["thumbnails"],
       title: json["metadata"]["title"],
       description: json["metadata"]["description"],
+      publishDate: json["metadata"]["publishDate"],
       assets: json["assets"],
     );
   }
