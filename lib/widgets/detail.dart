@@ -80,7 +80,9 @@ class Detail extends StatelessWidget {
                                   Text((video.videos[index].description != null)
                                       ? video.videos[index].description!
                                       : ''),
-                                  const Footer(),
+                                  Footer(
+                                    contentId: video.videos[index].contentId,
+                                  ),
                                 ],
                               ),
                             ),
@@ -158,7 +160,10 @@ class Detail extends StatelessWidget {
                                           ? article.articles[index]
                                               .authorImageUrl![0]['thumbnail']
                                           : ''),
-                                  const Footer(),
+                                  Footer(
+                                    contentId:
+                                        article.articles[index].contentId,
+                                  ),
                                 ],
                               ),
                             ),

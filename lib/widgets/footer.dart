@@ -3,7 +3,8 @@ import 'package:ign/widgets/comment.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Footer extends StatelessWidget {
-  const Footer({Key? key}) : super(key: key);
+  final String? contentId;
+  Footer({Key? key, this.contentId}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +35,9 @@ class Footer extends StatelessWidget {
               }
             },
           ),
-          const Comment(),
+          Comment(
+            contentId: contentId,
+          ),
         ],
       ),
     );

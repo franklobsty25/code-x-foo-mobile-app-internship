@@ -1,4 +1,4 @@
-package com.example.ign
+package com.colonkoded.ign
 
 import io.flutter.embedding.android.FlutterActivity
 
